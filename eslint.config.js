@@ -1,7 +1,7 @@
 import globals from 'globals'
 import pluginJs from '@eslint/js'
 import tseslint from 'typescript-eslint'
-import eslintConfigPrettier from 'eslint-config-prettier'
+import stylistic from '@stylistic/eslint-plugin'
 
 import { includeIgnoreFile } from '@eslint/compat'
 import path from 'node:path'
@@ -17,5 +17,5 @@ export default [
   { languageOptions: { globals: globals.browser } },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
-  eslintConfigPrettier,
+  stylistic.configs['recommended-flat'],
 ]
