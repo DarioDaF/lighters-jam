@@ -11,6 +11,7 @@
     "prettier": "prettier --write ."
   },
   "devDependencies": {
+    "@eslint/compat": "^1.2.1",
     "@eslint/js": "^9.13.0",
     "eslint": "^9.13.0",
     "eslint-config-prettier": "^9.1.0",
@@ -18,7 +19,8 @@
     "prettier": "^3.3.3",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.11.0",
-    "vite": "^5.4.9"
+    "vite": "^5.4.9",
+    "vite-plugin-zip-pack": "^1.2.4"
   },
   "packageManager": "pnpm@9.12.2+sha256.2ef6e547b0b07d841d605240dce4d635677831148cd30f6d564b8f4f928f73d2"
 }
