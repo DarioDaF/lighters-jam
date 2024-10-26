@@ -1,6 +1,6 @@
 import './style.css'
 
-import { FreeCamera, Scene, Sprite, SpriteManager, Vector3 } from 'babylonjs'
+import { FreeCamera, Scene, Sprite, SpriteManager, Vector3 } from '@/babylon_common'
 import { GameInstance, IGameScene } from './game'
 
 class MyScene implements IGameScene {

@@ -1,4 +1,5 @@
-import { Engine, RollingAverage } from 'babylonjs'
+import { Engine } from '@/babylon_common'
+import { RollingAverage } from '@babylonjs/core/Misc/performanceMonitor'
 
 export interface IGameScene {
   loop(): void

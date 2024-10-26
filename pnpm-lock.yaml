@@ -8,7 +8,7 @@ importers:
 
   .:
     dependencies:
-      babylonjs:
+      '@babylonjs/core':
         specifier: ^7.31.0
         version: 7.31.0
     devDependencies:
@@ -41,6 +41,9 @@ importers:
         version: 1.2.4(vite@5.4.10)
 
 packages:
+
+  '@babylonjs/core@7.31.0':
+    resolution: {integrity: sha512-cMuPuRLToD5/M2HMYEuGfqdLVaJfUVYdWU0ss5iRo45S43dD+jPOVfMra9EKoPb60RoaWH9aoPFDT2/yNI0npg==}
 
   '@esbuild/aix-ppc64@0.21.5':
     resolution: {integrity: sha512-1SDgH6ZSPTlggy1yI6+Dbkiz8xzpHJEVAlF/AM1tHPLsf5STom9rwtjE4hKAF20FfXXNTFqEYXyJNWh1GiZedQ==}
@@ -419,9 +422,6 @@ packages:
 
   argparse@2.0.1:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
-
-  babylonjs@7.31.0:
-    resolution: {integrity: sha512-Lwt+97qzoWn/Z16BXIgRcN4D+EsGoTa54SqdgYceZPYgoehuk6KfilpQXBbEd+N/SNyDuVMFZA+FkgnUcs5Q1A==}
 
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -879,6 +879,8 @@ packages:
 
 snapshots:
 
+  '@babylonjs/core@7.31.0': {}
+
   '@esbuild/aix-ppc64@0.21.5':
     optional: true
 
@@ -1177,8 +1179,6 @@ snapshots:
       color-convert: 2.0.1
 
   argparse@2.0.1: {}
-
-  babylonjs@7.31.0: {}
 
   balanced-match@1.0.2: {}
 
