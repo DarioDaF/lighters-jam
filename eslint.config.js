@@ -1,6 +1,6 @@
 import globals from 'globals'
-import pluginJs from '@eslint/js'
-import tseslint from 'typescript-eslint'
+import js from '@eslint/js'
+import ts from 'typescript-eslint'
 import stylistic from '@stylistic/eslint-plugin'
 
 import { includeIgnoreFile } from '@eslint/compat'
@@ -13,9 +13,39 @@ const gitignorePath = path.resolve(__dirname, '.gitignore')
 
 export default [
   includeIgnoreFile(gitignorePath),
-  { files: ['**/*.{js,mjs,cjs,ts}'] },
-  { languageOptions: { globals: globals.browser } },
-  pluginJs.configs.recommended,
-  ...tseslint.configs.recommended,
+
+  { files: [ '**/*.{js,mjs,cjs,ts}' ] },
+
+  {
+    languageOptions: {
+      globals: globals.browser,
+      parserOptions: {
+        parser: ts.parser,
+        projectService: true,
+        tsconfigRootDir: __dirname,
+      },
+    },
+  },
+
+  js.configs.recommended,
+
+  ...ts.configs.recommendedTypeChecked,
+  {
+    files: [ '!src/*' ],
+    ...ts.configs.disableTypeChecked,
+  },
+  {
+    rules: {
+      // This rule does NOT exist yet... https://github.com/typescript-eslint/typescript-eslint/issues/4571
+      //'@typescript-eslint/no-unused-private-class-members': [ 'error' ],
+    },
+  },
+
   stylistic.configs['recommended-flat'],
+  {
+    rules: {
+      '@stylistic/array-bracket-spacing': [ 'error', 'always' ],
+      '@stylistic/spaced-comment': [ 'off' ],
+    },
+  },
 ]

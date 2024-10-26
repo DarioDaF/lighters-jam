@@ -6,7 +6,6 @@ import { GameInstance, IGameScene } from './game'
 class MyScene implements IGameScene {
   gi: GameInstance
   scene: Scene
-  disposers: (() => void)[] = []
 
   s1: Sprite
 
