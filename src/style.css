@@ -32,3 +32,20 @@ body {
   text-align: right;
   vertical-align: middle;
 }
+
+#gamePhoneInput {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 1em;
+  user-select: none;
+}
+
+#gamePhoneInput td {
+  background-color: rgba(0, 80, 0, 70%);
+  color: white;
+  text-align: center;
+  width: 7em;
+  height: 4.5em;
+}

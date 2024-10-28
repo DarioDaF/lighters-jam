@@ -14,6 +14,7 @@
     "@eslint/compat": "^1.2.1",
     "@eslint/js": "^9.13.0",
     "@stylistic/eslint-plugin": "^2.9.0",
+    "@types/earcut": "^2.1.4",
     "eslint": "^9.13.0",
     "globals": "^15.11.0",
     "typescript": "~5.6.2",
@@ -23,6 +24,8 @@
   },
   "packageManager": "pnpm@9.12.2+sha256.2ef6e547b0b07d841d605240dce4d635677831148cd30f6d564b8f4f928f73d2",
   "dependencies": {
-    "@babylonjs/core": "^7.31.0"
+    "@babylonjs/core": "^7.31.0",
+    "clipper-lib": "^6.4.2",
+    "earcut": "^3.0.0"
   }
 }
