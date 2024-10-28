@@ -30,4 +30,5 @@ export default defineConfig({
       outFileName: `dist-${packageJson.version}.zip`,
     }),
   ],
+  base: './',
 })

@@ -132,6 +132,7 @@ class MyScene implements IGameScene {
     s1Transform.setTranslation(this.s1.position)
 
     //
+    //const polyCone = JSON.parse(JSON.stringify(p3)) as TPoly // @TODO: Better deep clone
     const polyCone: TPoly = [
       [ { X: 0, Y: 0 }, { X: 150, Y: 200 }, { X: 0, Y: 250 }, { X: -150, Y: 200 } ],
     ]
@@ -192,7 +193,7 @@ class MyScene implements IGameScene {
     if (result !== null) {
       this.poly0 = result
     }
-    console.log(`Blocks: ${this.poly0.length} | MaxVerts: ${Math.max(...this.poly0.map(c => c.length))}`)
+    //console.log(`Blocks: ${this.poly0.length} | MaxVerts: ${Math.max(...this.poly0.map(c => c.length))}`)
 
     this.pool.begin()
     let hue: number = 0
