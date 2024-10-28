@@ -4,7 +4,7 @@ import './clipper'
 
 import { FreeCamera, Scene, Sprite, SpriteManager, Vector3, Color3, Vector2, Matrix } from '@/babylon_common'
 import { GameInstance, IGameScene } from './game'
-import { CountourArea, PolyBool, PolyToVertexDatas, TPoly } from './clipper'
+import { PolyBool, PolyToVertexDatas, TPoly } from './clipper'
 
 import '@babylonjs/core/Materials/standardMaterial' // Standard material side effects
 
@@ -152,7 +152,7 @@ class MyScene implements IGameScene {
     const currPoint = new Vector2()
     const nextPoint = new Vector2()
     for (const countour of this.poly0) {
-      const isOuter = CountourArea(countour) > 0
+      //const isOuter = CountourArea(countour) > 0
       let _p = countour[countour.length - 1]
       currPoint.set(_p.X, _p.Y)
       _p = countour[0]
